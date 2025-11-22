@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/off_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Bande en haut -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:text="BudgetMaster"
+        android:gravity="center"
+        android:textColor="@color/off_white"
+        android:background="@color/deep_teal"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <!-- Formulaire -->
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeader">
+
+        <TextView
+            android:text="Ajouter un objectif"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_navy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etNom"
+            android:hint="Nom de l'objectif"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etCible"
+            android:hint="Montant cible"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnValider"
+            android:text="Valider"
+            android:background="@color/deep_teal"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnAnnuler"
+            android:text="Annuler"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- Menu bas -->
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
