@@ -65,4 +65,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return list;
     }
+    public boolean deleteObjectif(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int deleted = db.delete("objectifs", "id=?", new String[]{String.valueOf(id)});
+        return deleted > 0;
+    }
+
 }
